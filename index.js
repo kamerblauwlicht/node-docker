@@ -4,7 +4,7 @@ var connection = mysql.createConnection({
   host     : process.env.MYSQL_ADDRESS,
   user     : process.env.MYSQL_USERNAME,
   password : process.env.MYSQL_PASSWORD,
-  database : 'node_app'
+  database : process.env.MYSQL_DATABASE
 });
 
 var app = express();
