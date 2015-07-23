@@ -17,6 +17,13 @@ connection.connect(function(err){
   }
 });
 
+// create table if needed and seed
+connection.query("CREATE TABLE IF NOT EXISTS tests ( counter INT(6) UNSIGNED );", function(err, rows, fields) {
+  if (!err) {
+    connection.query("INSERT INTO tests (counter) VALUES (1);")
+  }
+});
+
 app.get("/",function(req,res){
   connection.query('SELECT counter from tests LIMIT 1', function(err, rows, fields) {
     if (!err) {
