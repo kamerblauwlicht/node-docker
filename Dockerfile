@@ -8,6 +8,4 @@ ADD . $APP_HOME
 
 RUN cd $APP_HOME; npm install
 
-EXPOSE 5000
-
 CMD ["node","index.js"]
