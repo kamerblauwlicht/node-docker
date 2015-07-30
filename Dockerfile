@@ -1,11 +1,11 @@
 FROM node:0.12.2-onbuild
 
 ENV APP_HOME /app
-RUN mkdir $APP_HOME
-WORKDIR $APP_HOME
+RUN mkdir /app
+WORKDIR /app
 
-ADD . $APP_HOME
+ADD . /app
 
-RUN cd $APP_HOME; npm install
+RUN cd /app; npm install
 
 CMD ["node","index.js"]
