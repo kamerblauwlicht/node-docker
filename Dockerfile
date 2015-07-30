@@ -8,4 +8,6 @@ ADD . $APP_HOME
 
 RUN cd $APP_HOME; npm install
 
+EXPOSE 3000
+
 CMD ["node","index.js"]
