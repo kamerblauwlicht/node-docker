@@ -1,0 +1,14 @@
+services:
+  web:
+    git_url: git://github.com:cloud66-samples/node-docker
+    git_branch: Siavash   
+    command: rackup -p 3000               
+    build_command: rake db:migrate        
+    deploy_command: rake db:migrate       
+    log_folder: /usr/src/app/log          
+    ports: ["3000:80:443", "4000"]        
+    volumes: ["/tmp:/tmp/mnt_folder"]     
+    health: default
+databases:
+  - "mysql"                               
+  - "redis"                  
