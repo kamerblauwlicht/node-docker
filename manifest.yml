@@ -1,9 +1,10 @@
 --
-docker:
-  configuration:
-    version: 1.7.0
-  servers:
-  - server:
+production:
+  docker:
+    configuration:
+      version: 1.7.0
+    servers:
+    - server:
       unique_name: Pelican
       address: 136.243.22.101
       username: root
